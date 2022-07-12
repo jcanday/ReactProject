@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './styles.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home,Inventory,SignIn } from './components';
+import { Home,Inventory,SignIn,Dashboard } from './components';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -12,7 +12,8 @@ root.render(
     <Router>
         <Routes>
           <Route path='/' element={<Home title  ={'Car Inventory'} sub = {'Get it filled'}/>} />
-          <Route path='/Inventory' element={<Inventory title = {'This is the Inventory'}/>} />
+          <Route path='/inventory' element={<Inventory title = {'This is the Inventory'}/>} />
+          <Route path='/dashboard' element={<Dashboard title = {'Dashboard of Cars'}/>} />
           <Route path='/signin' element={<SignIn title={'Sign In Here'}/>} />
         </Routes>
       </Router>

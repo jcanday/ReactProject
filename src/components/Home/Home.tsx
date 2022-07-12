@@ -79,6 +79,9 @@ export const Home = (props:Props) => {
                         <NavLink to="/inventory">Inventory</NavLink>
                     </li>
                     <li>
+                        <NavLink to="/dashboard">Dash</NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/signin">SignIn</NavLink>
                     </li>
                 </NavList>
