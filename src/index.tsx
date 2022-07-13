@@ -1,15 +1,18 @@
-import React from 'react';
+import React from 'react'; 
 import ReactDOM from 'react-dom/client';
 import './styles.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home,Inventory,SignIn,Dashboard } from './components';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Router>
+    <Provider store = {store}>   
+      <Router>
         <Routes>
           <Route path='/' element={<Home title  ={'Car Inventory'} sub = {'Get it filled'}/>} />
           <Route path='/inventory' element={<Inventory title = {'This is the Inventory'}/>} />
@@ -17,6 +20,7 @@ root.render(
           <Route path='/signin' element={<SignIn title={'Sign In Here'}/>} />
         </Routes>
       </Router>
+    </Provider>     
   </React.StrictMode>
 );
 
