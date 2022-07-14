@@ -26,9 +26,6 @@ export const CharForm = (props:CharFormProps) => {
     let { charData, handleDataFetch } = useGetData();
     const store = useStore()
     const name = useSelector<CharState>(state => state.name)
-    const desc = useSelector<CharState>(state => state.desc)
-    const super_power = useSelector<CharState>(state => state.super_power)
-    const comics_appeared = useSelector<CharState>(state => state.comics_appeared)
     const { register, handleSubmit } = useForm({})
 
     const onSubmit = async (data:any, event:any) => {
